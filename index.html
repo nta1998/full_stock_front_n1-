@@ -73,7 +73,7 @@
             <div class="accordion-body">email: ${pr.email}<br>phone number:${pr.phone_number}<br>favorite color:<div style="background-color: ${pr.favorite_color};">${pr.favorite_color} </div></h1><br><button class="btn btn-success" onclick="upd(${pr.id})">update</button> <button class="btn btn-danger" onclick="del(${pr.id})">delete</button> <button class="btn btn-info" onclick= "save_to('${pr.name}')">add to My favorite</button> </div>
             </div>
             </div>
-            </div>`).join(" "))
+            </div>`).join(""))
         }
         const add=async()=>{
             axios.post(MY_SERVER+'/',{name: pname.value, email: pemail.value, phone_number: pnumber.value, favorite_color: pcolor.value})
@@ -89,7 +89,6 @@
             await show_all()
         }
     show_all()
-    load_data()
     </script>
 </body>
 </html>
